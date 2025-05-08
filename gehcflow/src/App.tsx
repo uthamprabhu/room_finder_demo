@@ -3,8 +3,9 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Admin from './pages/Admin';
+import AgentSignup from './pages/AgentSignup';
+import CreateOrder from './pages/CreateOrder';
 
 // App.tsx
 const LanguageWrapper = ({ children }: { children: React.ReactNode }) => {
@@ -31,8 +32,9 @@ const App = () => {
           <div key={lang}>
             <Routes>
               <Route path="" element={<Home />} />
-              <Route path="about" element={<About />} />
-              <Route path="contact" element={<Contact />} />
+              <Route path="admin-dashboard" element={<Admin />} />
+              <Route path="agent/signup" element={<AgentSignup />} />
+              <Route path="external/order" element={<CreateOrder />} />
             </Routes>
           </div>
         </LanguageWrapper>
